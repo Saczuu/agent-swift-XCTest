@@ -7,15 +7,12 @@
 //
 
 import Foundation
-import UIKit
 
 enum TagHelper {
   
-  static let defaultTags = [
-    UIDevice.current.systemName,
-    UIDevice.current.systemVersion,
-    UIDevice.current.modelName,
-    UIDevice.current.model
-  ]
+    static let defaultTags = [
+    Host.current().localizedName ?? "Unknown",
+    ProcessInfo.processInfo.operatingSystemVersion
+    ] as [Any]
   
 }
